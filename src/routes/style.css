@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+}
+#app {
+  overflow-x: hidden;
+}
+a {
+  color: black;
+}
+.flickity-prev-next-button.previous {
+  left: -50px !important;
+}
+.flickity-prev-next-button.next {
+  right: -50px !important;
+}
+.flickity-button {
+  background: none !important;
+}
+
+
+@media (max-width: 768px) {
+  .flickity-prev-next-button.previous {
+    left: 10px !important;
+  }
+  .flickity-prev-next-button.next {
+    right: 10px !important;
+  }
+  .flickity-button {
+    top: 35% !important;
+    background: #fff9 !important;
+  }
+  .flickity-page-dots {
+    bottom: -22px;
+    border-radius: 10px !important;
+  }
+  /* dots are lines */
+  .flickity-page-dots .dot {
+    height: 4px !important;
+    width: 10px  !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+}
+.flickity-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  padding-left: 24px;
+}
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+h3 {
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+h4.tagline {
+  letter-spacing: 1px;
+  font-size: 44px;
+  font-weight: normal;
+}
+.projectname {
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.button.project {
+  display: inline-block;
+  background: none;
+  color: lightgray;
+  border: none;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  margin: 20px;
+  transition: all 0.4s;
+  position: relative;
+  cursor: pointer;
+}
+.button.project .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: gray;
+  transition: all 0.4s;
+}
+.button.project:hover .underline, .button.project.active .underline {
+  width: 100%;
+}
+.button.project:hover, .button.project.active {
+  color: black;
+}
+@media (max-width: 768px) {
+  .button.project {
+    margin: 0;
+    margin-right: 14px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+a {
+  text-decoration: none;
+}
+button.bordered, .button.bordered {
+  text-align: center;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+button.bordered.dark, .button.bordered.dark {
+  border-radius: 6px;
+  background: none;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
