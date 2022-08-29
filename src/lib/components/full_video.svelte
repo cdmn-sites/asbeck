@@ -24,7 +24,7 @@
 
 <svelte:window bind:scrollY/>
 
-<video style="transform:translateY({scrollY/3}px)" class="bg-dark object-cover h-screen w-full absolute" preload="auto" autoplay="autoplay" playsinline muted loop="loop" poster="/blobs/{video}?w=1920"  >
+<video style="transform:translateY({scrollY/3}px)" class="bg-dark object-cover h-screen w-full absolute" preload="auto" autoplay="autoplay" playsinline muted loop="loop" poster="API_URL/blobs/{video}?w=1920"  >
   <source src="API_URL/blobs/{video}" type="video/mp4">
 </video>
 
