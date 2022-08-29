@@ -1,6 +1,6 @@
 <script>
 
-  import '$lib/vendor/flickity/flickity.css'
+  import 'flickity/dist/flickity.css'
 
   import Preload from '$lib/components/preload.svelte'
 
@@ -21,7 +21,7 @@
       el.src = `API_URL/blobs/${project.main_image}?w=600`
     }
 
-    await import('$lib/vendor/flickity/flickity.min.js')
+    const Flickity = (await import('flickity')).default
     const flck = new Flickity( '.flickity', {
       // options
       cellAlign: 'left',
