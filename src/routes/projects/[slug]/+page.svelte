@@ -27,12 +27,12 @@
 <section class="grid lg:grid-cols-2  container mx-auto gap-6 items-start">
   <div class="overflow-hidden whitespace-nowrap  h-400px lg:h-500px relative">
     <!-- {#each project.gallery || [] as image}
-      <a data-fslightbox="gallery" class="inline-block w-full align-top relative h-full" href="SERVER_URL/blobs/{image.image}?w=1920">
-        <img class="object-cover object-center w-full h-full relative" src="SERVER_URL/blobs/{image.image}?w=800" alt="" />
+      <a data-fslightbox="gallery" class="inline-block w-full align-top relative h-full" href="API_URL/blobs/{image.image}?w=1920">
+        <img class="object-cover object-center w-full h-full relative" src="API_URL/blobs/{image.image}?w=800" alt="" />
       </a>
     {/each} -->
-    <a data-fslightbox="gallery" class="inline-block w-full align-top relative h-full" href="SERVER_URL/blobs/{project.main_image}?w=1920">
-      <img class="object-cover object-center w-full h-full relative" src="SERVER_URL/blobs/{project.main_image}?w=800" alt="" />
+    <a data-fslightbox="gallery" class="inline-block w-full align-top relative h-full" href="API_URL/blobs/{project.main_image}?w=1920">
+      <img class="object-cover object-center w-full h-full relative" src="API_URL/blobs/{project.main_image}?w=800" alt="" />
     </a>
   </div>
   <div class=" tracking-wide md:pl-8">
@@ -62,7 +62,7 @@
   <div class="container mx-auto grid md:grid-cols-3 gap-4">
     {#each projects.filter((p) => p.construction_status == 'construction').filter(p => p.id !== project.id) as fp, i}
       <a class="mb-6" href="/projects/{fp.slug}">
-        <img src="SERVER_URL/blobs/{fp.main_image}?w=600" class="object-cover w-full h-80" alt="" />
+        <img src="API_URL/blobs/{fp.main_image}?w=600" class="object-cover w-full h-80" alt="" />
         <h2 class="text-black text-size-4 mt-2 font-normal uppercase tracking-wide">{fp.title}</h2>
       </a>
     {/each}

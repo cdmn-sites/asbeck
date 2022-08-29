@@ -18,7 +18,7 @@
     // preload all project images
     for (let project of projects) {
       const el = new Image()
-      el.src = `SERVER_URL/blobs/${project.main_image}?w=600`
+      el.src = `API_URL/blobs/${project.main_image}?w=600`
     }
 
     await import('$lib/vendor/flickity/flickity.min.js')
@@ -125,7 +125,7 @@
           <a href="/projects/{activeProject.slug}" class="button bordered dark w-50%" in:fly|local={{y: 40, duration: 1600, delay: 400}}>Explore</a>
         </div>
         <div class="col-span-7 h-full overflow-hidden relative">
-          <Preload src="SERVER_URL/blobs/{activeProject.main_image}?w=600" let:src>
+          <Preload src="API_URL/blobs/{activeProject.main_image}?w=600" let:src>
             <img in:fly|local={{x: 40, duration: 1600}} {src} alt={activeProject.title} class="object-cover w-full h-full absolute">  
           </Preload>
         </div>
@@ -150,7 +150,7 @@
       </div>
       {#if activeProject == project}
         <div transition:slide|local>
-          <img src="SERVER_URL/blobs/{activeProject.main_image}?w=600" alt={activeProject.title} class="object-cover aspect-square w-full">  
+          <img src="API_URL/blobs/{activeProject.main_image}?w=600" alt={activeProject.title} class="object-cover aspect-square w-full">  
           <div class="text-left col-span-5 flex flex-col">
             <div class="md:py-24">
               <h4 class="tagline mb-6 mt-3 !text-size-9">
@@ -201,7 +201,7 @@
   <div class="flickity w-full">
     {#each projects.filter((p) => p.construction_status == 'completed') as reference}
       <div class="relative reference">
-        <img class="aspect-square md:aspect-auto w-full object-cover" src="SERVER_URL/blobs/{reference.main_image}?w=400" alt="" >
+        <img class="aspect-square md:aspect-auto w-full object-cover" src="API_URL/blobs/{reference.main_image}?w=400" alt="" >
         <h3 class="uppercase !text-size-12px font-normal mt-4">{reference.title}</h3>
         <!-- <h4 class="font-normal mt-2 mb-5 text-size-24px">{reference.type}</h4> -->
         <p class="text-size-11px leading-4 min-h-120px mt-4">
